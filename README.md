@@ -13,3 +13,14 @@ python run.py
 netstat -tulnp | grep 5000
 kill -9 <process_id>
 ```
+
+### To get the list of products currently saved
+```python
+import pymongo
+from pymongo import MongoClient
+client = MongoClient('localhost', 27017)
+db = client.mini_amazon
+prods = db.products_collection.find()
+for prod in prods:
+    print(prod)
+```
