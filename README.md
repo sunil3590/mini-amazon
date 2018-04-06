@@ -7,3 +7,9 @@ cd mini-amazon
 pip install -r requirements.txt
 python run.py
 ```
+
+### If you face 'port already in use' error
+```bash
+netstat -tulnp | grep 5000
+kill -9 <process_id>
+```
