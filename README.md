@@ -24,3 +24,15 @@ prods = db.products_collection.find()
 for prod in prods:
     print(prod)
 ```
+
+### Start mongodb
+```bash
+mkdir data
+mongod --dbpath ./data
+```
+
+### curl commands
+```bash
+curl -X POST -F 'title=oppo' -F 'description=whatever' -F 'price=10000' http://127.0.0.1:5000/products
+curl http://127.0.0.1:5000/products?title=oppo
+```
